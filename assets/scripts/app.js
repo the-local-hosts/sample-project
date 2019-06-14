@@ -1,7 +1,6 @@
 'use strict'
 
-const booksEvents = require('./events')
-
+const events = require ('events')
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -9,5 +8,6 @@ const booksEvents = require('./events')
 // require('./example')
 
 $(() => {
-  $('#books-index').on('click', booksEvents.onIndex)
+  $('#books-index').on('click',events.onIndex)
+
 })

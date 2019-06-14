@@ -1,6 +1,6 @@
 'use strict'
 
-const config = require('./config.js')
+const config = require('../config.js')
 
 const index = () => {
   return $.ajax({
@@ -9,6 +9,14 @@ const index = () => {
   })
 }
 
+const destroy = (id) => {
+  return $.ajax({
+    url: config.apiUrl + '/books/' + id,
+    method: 'DELETE'
+  })
+}
+
 module.exports = {
-  index
+  index,
+  destroy
 }

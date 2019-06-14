@@ -9,5 +9,4 @@ const events = require ('events')
 
 $(() => {
   $('#books-index').on('click',events.onIndex)
-
 })

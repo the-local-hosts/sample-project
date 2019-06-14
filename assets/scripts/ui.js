@@ -7,7 +7,6 @@ const onIndexSuccess = (data) => {
 
    const showBooksHtml = showBooksTemplate({ books: data.books })
   $('.content').html(showBooksHtml)
-  chart.render()
   $('#action-feedback').removeClass()
   $('#action-feedback').addClass('success')
   $('#action-feedback').text('updated successfully')

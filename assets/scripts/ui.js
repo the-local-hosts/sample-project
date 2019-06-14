@@ -2,20 +2,10 @@
 
 const showBooksTemplate = require('./templates/display-books.handlebars')
 
-
 const onIndexSuccess = (data) => {
-
-   const showBooksHtml = showBooksTemplate({ books: data.books })
-  $('.content').html(showBooksHtml)
-  $('#action-feedback').removeClass()
-  $('#action-feedback').addClass('success')
-  $('#action-feedback').text('updated successfully')
-  $('#action-feedback').show()
-  setTimeout(function () {
-    $('#action-feedback').hide()
-  }, 3000)
+  const showBooksHtml = showBooksTemplate(data)
+  $('.container').html(showBooksHtml)
 }
-
 
 const onIndexFailure = (data) => {
   $('#action-feedback').removeClass()
@@ -26,7 +16,6 @@ const onIndexFailure = (data) => {
     $('#action-feedback').hide()
   }, 4000)
 }
-
 
 module.exports = {
   onIndexFailure,
